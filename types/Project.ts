@@ -8,11 +8,12 @@ export interface Project {
     createdAt: string;
     updatedAt: string;
     publishedAt: string;
+    project_description: string;
     project_images: {
       data: ProjectImage[];
     };
     project_thumbnail: {
       data: ProjectImage;
-    }
+    };
   };
 }

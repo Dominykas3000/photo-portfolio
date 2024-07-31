@@ -40,26 +40,33 @@ export default function ProjectPage() {
     }
   }, [id]);
 
+  let projectYear = "";
+
   if (!project) {
     return <div>Loading...</div>;
+  } else {
+    projectYear = project.attributes.project_date.slice(0, 4);
   }
 
   return (
-    <div>
-      <h1>Project {project.id}</h1>
-      <p>{project.attributes.project_name}</p>
-      {/* Render other project details here */}
+    <section>
+      <article className="flex gap-4 justify-center items-center flex-col mt-4 mb-8">
+        <h1 className="text-3xl font-light tracking-[0.4rem]">
+          {project.attributes.project_name}
+        </h1>
+        <div className="flex flex-col gap-2">
+          <p className="text-balance text-lg tracking-[0.05rem]">
+            {project.attributes.project_description}
+          </p>
+          <p className="text-center text-sm text-gray-400 tracking-[0.2rem]">
+            {projectYear}
+          </p>
+        </div>
+      </article>
 
-      <h2>Images</h2>
-
-      {/* {project.attributes.project_images.data.map((image) => (
-        <img
-          src={"http://127.0.0.1:1337" + image.attributes.formats.small.url}
-          alt={image.attributes.name}
-        />
-      ))} */}
-
-      <ImageSlider images={project.attributes.project_images.data} />
-    </div>
+      <div className="flex justify-center">
+        <ImageSlider images={project.attributes.project_images.data} />
+      </div>
+    </section>
   );
 }

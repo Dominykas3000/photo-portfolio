@@ -28,7 +28,7 @@ const ProjectLink = (props: ProjectLinkProps) => {
         </div>
       </Link>
       <img
-        className="fixed z-10 top-1/2 left-1/2 w-full max-w-lg h-auto transform -translate-x-1/2 -translate-y-1/2 hidden opacity-0  duration-300 group-hover:opacity-100 transition-all group-hover:block"
+        className="fixed z-10 top-1/2 left-1/2 w-full max-w-lg h-auto transform -translate-x-1/2 -translate-y-1/2 hidden opacity-0  duration-300 group-hover:opacity-100 max-h-[70dvh]  transition-all group-hover:block"
         src={project_thumbnail}
         alt={project_name}
       />
