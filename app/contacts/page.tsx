@@ -7,7 +7,7 @@ const ContactsPage = () => {
       <section>
         {/* <h1 className="text-4xl font-bold text-center mb-8">Contact</h1> */}
         <div className="text-lg text-center mb-4 flex-col m-auto w-fit">
-          If you want to get in touch, you can reach me here:
+          {/* If you want to get in touch, you can reach me here: */}
           <br />
           <a
             href="mailto:benita.vaskelaite@gmail.com"

@@ -10,7 +10,7 @@ const Header = () => {
       </Link>
       <ul className="flex align-center justify-center gap-4">
         <li>
-          <Link className="text-lg hover:underline" href="/work">
+          <Link className="text-lg hover:underline" href="/">
             Work
           </Link>
         </li>

@@ -38,9 +38,9 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     // adaptiveHeight: true,
-    // cssEase: "linear",
+    cssEase: "ease-out",
     // autoplay: true,
-    // autoplaySpeed: 5000,
+    // autoplaySpeed: 3000,
     // nextArrow: <SampleNextArrow  />,
     // prevArrow: <SamplePrevArrow />,
   };
@@ -55,7 +55,9 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
             <img
               className="m-auto w-auto h-auto max-h-[70dvh] max-w-lg"
               src={
-                "http://127.0.0.1:1337" + image.attributes.formats.medium.url
+                image.attributes.formats.medium ?
+                  "http://127.0.0.1:1337" + image.attributes.formats.medium.url
+                  : "http://127.0.0.1:1337" + image.attributes.url
               }
               alt={image.attributes.name}
             />
