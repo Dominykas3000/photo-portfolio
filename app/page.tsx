@@ -1,5 +1,6 @@
 "use client";
 import ProjectLink from "@/components/ProjectLink";
+import { ProjectLinkSkeleton } from "@/components/skeleton/ProjectLinkSkeleton";
 import { ProjectImage } from "@/types/ProjectImage";
 import React, { useEffect, useState } from "react";
 
@@ -52,7 +53,9 @@ const Home: React.FC = () => {
     <main>
       <div className="w-fit flex flex-col justify-start">
         {loading ? (
-          <p>Loading...</p>
+          Array.from({ length: 10 }).map((_, index) => (
+            <ProjectLinkSkeleton key={index} />
+          ))
         ) : (
           projects.map((project) => (
             <ProjectLink
